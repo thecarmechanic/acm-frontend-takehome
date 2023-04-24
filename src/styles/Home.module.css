@@ -1,0 +1,114 @@
+.container {
+  padding: 2rem;
+  min-height: calc(100vh - 84px);
+}
+
+.optionsMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  font-weight: 500;
+  padding: 8px;
+}
+
+.rainbow {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    270deg,
+    #ff6f6f,
+    #f9a857 18.75%,
+    #80ce1c 36.98%,
+    #51c0c0 55.73%,
+    #62b0ff 75%,
+    #816dff
+  );
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rowContainer {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.headerRow {
+  text-align: left;
+}
+
+.headerRow > th {
+  border: none;
+  padding: 0.75rem;
+  background-color: #22acea;
+  color: white;
+}
+
+.checkboxHeaderCol {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  width: 10%;
+}
+
+.titleHeaderCol {
+  width: 40%;
+}
+
+.dateTimeHeaderCol {
+  width: 20%;
+}
+
+.locationHeaderCol {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 30%;
+}
+
+.optionsMenu {
+  border-radius: 8px;
+  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+.eventModeBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.eventModeBtn {
+  all: unset;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.eventModeBtn[data-status="active"] {
+  font-weight: 700;
+}
+
+.viewModeBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.viewModeBtn {
+  all: unset;
+  cursor: pointer;
+}
+
+.viewModeBtn[data-mode="active"] path {
+  fill: #22acea;
+}
