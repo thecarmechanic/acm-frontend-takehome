@@ -1,97 +1,29 @@
-# Instructions
+# About
+As part of training for ACM's (school club) frontend dev team, I worked on this webpage that allows members to track which ACM Events.
 
-Welcome to ACM Dev Team's frontend takehome challenge!
+This project utilizes [TypeScript](https://www.typescriptlang.org/docs/), [React](https://react.dev/), [Next.js](https://nextjs.org/docs).
 
-In this challenge, you'll need to fix certain bugs and implement some features with the starter code given to you.
+The original starter code for the project can be viewed [here](https://github.com/acmucsd/acm-frontend-takehome).
 
-Dev Team has created a webpage for members to track which ACM Events they've attended, but some of the code isn't working! It's up to you to help us fix our codebase!
+## Process
+The purpose of this challenge is to learn how to fetch and display data from an api, develope simple features on my own, and gain experience debugging and testing code. I was new toTypeScript and Next.js prior to this project.
 
-Start by first cloning the GitHub repository to your local machine and make changes to it using VSCode or another editor. To view a preview of the webpage, follow the instructions below.
+First I had to fix 3 major bugs in the starter code:
+1. The data from the api does not display at all
+    - This was because the pre-written function that loaded the events was only instantiated, but not called
+2. The user could not toggle between grid/list view
+    - This was because the specific view for the buttons were not assigned
+3. The checkbox allowing users to select an event to signal attendance was not working
+    - The card component never updated, I wrote and onClick function to fix this
 
-Once you're finished with the challenge, you're all set! Keep your changes on hand because we'll be discussing them during our interview and asking you to present/demo your code.
+Then I added 2 features:
+1. Pageination
+    - To reduce tedious scrolling because all the events displayed on one page, I created a new component to count and display the page the user switched to and displayed it at the bottom of the page with arrow buttons to allow users to toggle back and forth
+    - I set each page to display 25 events each, and counted them to make sure that events didn't repeat
+2. Search
+    - I created a search bar and wrote a function to filter events displayed on the page in real time according to what the user typed
 
-If you're unable to finish all of the tasks before your scheduled interview, no worries! We'll review the code you did write and go through some of the remaining exercises together.
-
-### Prerequisites
-
-- `node`
-- `npm` or `yarn`
-
-### Start the server
-
-- Run `yarn install`
-- Run `yarn dev`
-- Open the app in http://localhost:3000/
-
-or
-
-- Run `npm install`
-- Run `npm run dev`
-- Open the app in http://localhost:3000/
-
-### Special considerations
-
-#### Technology
-
-At ACM, we use Next.js + React + TypeScript in our codebase.
-
-You are not required to know TypeScript, React, or Next.js before starting this challenge, but some familiarity with JavaScript/TypeScript or React may be helpful.
-
-You're free to search up documentation and resources to help you with this takehome, but be sure that you understand how your solution works!
-The following resources may be helpful for you:
-
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [React](https://react.dev/)
-- [Next.js](https://nextjs.org/docs) - Knowledge of Next.js will not be necessary to complete this takehome.
-
-#### Solution
-
-- Solutions can be HTML, CSS, or TypeScript oriented, depending on the bug and your solution.
-- Modify any file inside the `src` folder as long as the expected result is correct.
-
----
-
-# Bug 1: Events aren't being loaded
-
-**How to reproduce:**
-
-1. Refresh/view the webpage.
-
-**Expected:** Events from the Membership Portal API should be loaded in and displayed on the screen.
-
-**Actual:** No events are loading in, so the screen is blank.
-
-# Bug 2: Unable to toggle between grid/row view
-
-**How to reproduce:**
-
-1. Click on the grid/row icons on the right of the "All Past Events" bar.
-
-**Expected:** Events preview change from row/grid view depending on which one is clicked.
-
-**Actual:** Events preview stays stuck in grid mode no matter which icon is clicked.
-
-# Bug 3: Events checkbox not working
-
-**How to reproduce:**
-
-1. Click on the checkbox attached to any event card
-
-**Expected:** Clicking the checkbox toggles its value
-
-**Actual:** Nothing happens
-
-# Feature 1: Split events into separate pages
-
-**Issue:** There are way too many event cards on the page at a time!
-
-**Your Task:** Implement buttons that let you move between pages of results! Each page should store 25 events at a time. Left and right arrow icons are located under src/icons as [src/icons/LeftArrowIcon.tsx](src/icons/LeftArrowIcon.tsx) and [src/icons/RightArrowIcon.tsx](src/icons/RightArrowIcon.tsx) for you to use.
-
-**Sample Design:** This component should be located at the bottom of the event tracker page.
-![](public/page-selector.png)
-
-# Feature 2: Choose your own adventure!
-
-If you have extra time after completing the first 4 tasks, build something cool that you'd like to add to this application!
-
-Feel free to get creative and add anything that you think enhances the usability or improves the user experience! Try to wow us with your frontend skills!
+## Reflection & Next Steps
+This project taught me alot about web development, which is a very effective way to communicate information, and I'm excited to keep advancing my skills. If I revisit this project, here are a few more features that would be cool to explore are:
+1. A dropdown box of recommended event search based on the letters the user types in the search bar (ex.google)
+2. Filter events by groups (ie.attended or not, type-social,professional,cyber,ai,etc)

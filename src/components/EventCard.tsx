@@ -46,6 +46,7 @@ export default function EventCard({ event, cardMode, viewMode }: EventCardProps)
   if (cardMode === 'attended' && !attended) return null;
 
   if (viewMode === 'card')
+  //Bug 3: Checkbox status on lines 58 and 73 set to default attended=false, but never updated with click - onClick function solves this
     return (
       <a
         href={`https://acmucsd.com/events/${encodeURIComponent(event.title.toLowerCase().trim().replace(/ /g, '-'))}-${
@@ -54,7 +55,7 @@ export default function EventCard({ event, cardMode, viewMode }: EventCardProps)
         className={style.eventCardContainer}
       >
         <img src={event.cover} className={style.eventCover} />
-        <input className={style.checkbox} type="checkbox" checked={attended} />
+        <input className={style.checkbox} type="checkbox" checked={attended} onClick = {()=>setAttended(!attended)}/>
         <div className={style.eventInfoContainer}>
           <p>{event.title}</p>
           <p className={style.eventDateTime}>
@@ -69,7 +70,7 @@ export default function EventCard({ event, cardMode, viewMode }: EventCardProps)
     return (
       <tr className={style.eventRowContainer}>
         <td className={style.checkboxCell}>
-          <input type="checkbox" checked={attended} />
+          <input type="checkbox" checked={attended} onClick={()=>setAttended(!attended)}/>
         </td>
         <td className={style.titleCell}>
           <a
