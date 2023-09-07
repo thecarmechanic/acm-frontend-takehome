@@ -1,5 +1,5 @@
 # About
-As part of training for ACM's (school club) frontend dev team, I worked on this webpage that allows members to track which ACM Events.
+As part of training for ACM's (school club) frontend dev team, I worked on this webpage that allows members to view past events the club has held.
 
 This project utilizes [TypeScript](https://www.typescriptlang.org/docs/), [React](https://react.dev/), [Next.js](https://nextjs.org/docs).
 
