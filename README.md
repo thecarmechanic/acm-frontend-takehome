@@ -1,12 +1,12 @@
 # About
-As part of training for ACM's (school club) frontend dev team, I worked on this webpage that allows members to view past events the club has held.
+As part of training for ACM's (school club) frontend web deelopment team, I worked on this webpage that allows members to view events the club has held.
 
 This project utilizes [TypeScript](https://www.typescriptlang.org/docs/), [React](https://react.dev/), [Next.js](https://nextjs.org/docs).
 
 The original starter code for the project can be viewed [here](https://github.com/acmucsd/acm-frontend-takehome).
 
 ## Process
-The purpose of this challenge is to learn how to fetch and display data from an api, develope simple features on my own, and gain experience debugging and testing code. I was new toTypeScript and Next.js prior to this project.
+The purpose of this challenge is to learn how to fetch and display data from an api, develop simple features on my own, and gain experience debugging and testing code. I was new toTypeScript and Next.js prior to this project.
 
 First I had to fix 3 major bugs in the starter code:
 1. The data from the api does not display at all
@@ -17,8 +17,8 @@ First I had to fix 3 major bugs in the starter code:
     - The card component never updated, I wrote and onClick function to fix this
 
 Then I added 2 features:
-1. Pageination
-    - To reduce tedious scrolling because all the events displayed on one page, I created a new component to count and display the page the user switched to and displayed it at the bottom of the page with arrow buttons to allow users to toggle back and forth
+1. Pagination
+    - To reduce tedious scrolling from copying all the events on one page, I created a new component to count and display the current page number and displayed it at the bottom of the page with arrow buttons to allow users to toggle back and forth
     - I set each page to display 25 events each, and counted them to make sure that events didn't repeat
 2. Search
     - I created a search bar and wrote a function to filter events displayed on the page in real time according to what the user typed
