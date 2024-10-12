@@ -1,12 +1,12 @@
 # About
-As part of training for ACM's (school club) frontend web deelopment team, I worked on this webpage that allows members to view events the club has held.
+As part of training for ACM's (school club) frontend web development team, I worked on this webpage that allows members to view events the club has held.
 
 This project utilizes [TypeScript](https://www.typescriptlang.org/docs/), [React](https://react.dev/), [Next.js](https://nextjs.org/docs).
 
 The original starter code for the project can be viewed [here](https://github.com/acmucsd/acm-frontend-takehome).
 
 ## Process
-The purpose of this challenge is to learn how to fetch and display data from an api, develop simple features on my own, and gain experience debugging and testing code. I was new toTypeScript and Next.js prior to this project.
+My goal in taking on this challenge was to learn how to fetch and display data from an api, develop simple features on my own, and gain experience debugging and testing code. I was new to TypeScript and Next.js prior to this project.
 
 First I had to fix 3 major bugs in the starter code:
 1. The data from the api does not display at all
